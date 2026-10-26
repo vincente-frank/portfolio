@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+@import 'tailwindcss';
+
+
+
+@theme{
+  --font-nunito:"Nunito", sans-serif;
+  --font-kempt:"Unkempt", sans-serif;
+  --font-glitch: "Rubik Glitch", sans-serif;
+  --font-ubuntu: "Ubuntu Mono", sans-serif;
+  --font-charon: "Iosevka Charon Mono", sans-serif;
+
+  /* colors */
+  --color-charcoal-brown: #28271D;
+  --color-olive-leaf: #4E502C;
+  --color-dusty-grey: #D3D5D2;
+  --color-khaki-beige: #C2B9A5;
+  --color-dusty-olive: #C2B9A5;
+
+  /* copy */
+  /* --color-charcoal-brown: #28271D;
+  --color-olive-leaf: #4E502C;
+  --color-dusty-grey: #D3D5D2;
+  --color-khaki-beige: #C2B9A5;
+  --color-dusty-olive: #C2B9A5; */
+
+};
