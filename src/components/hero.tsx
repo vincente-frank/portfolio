@@ -43,7 +43,7 @@ const Hero = () => {
             <Navigation/>
             {/* content container div */}
             <div className="flex items-start justify-start flex-col
-            gap-y-8 pt-12 text-dusty-olive font-charon md:flex-row
+            gap-y-8 pt-24 text-dusty-olive font-charon md:flex-row
             md:gap-x-12 ">
             {/* the left content div */}
             <div>

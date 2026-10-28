@@ -16,8 +16,8 @@ const Together = () => {
             <div className="relative flex flex-col items-center justify-center
             pt-[9rem] md:pt-[7rem] ">
                 <h2 className="font-glitch uppercase tracking-[.3rem] text-center
-                py-3 leading-[2.5rem] font-thin text-[24px] text-charcoal-brown
-                md:text-[4rem] md:leading-[5rem] md:text-dusty-grey
+                py-3 leading-[2.5rem] font-thin text-[24px]
+                md:text-[4rem] md:leading-[5rem] text-dusty-grey
                  ">your business deserves more</h2>
                 <h1 className="font-thin py-3 text-[18px] tracking-[.2rem]
                 text-center md:text-[35px] md:font-black ">Let's create together</h1>
