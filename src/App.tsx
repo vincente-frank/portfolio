@@ -1,9 +1,10 @@
 import './App.css'
 import About from './components/about'
+import FAQ from './components/faq'
 import Hero from './components/hero'
 import Projects from './components/projects'
 import Services from './components/services'
-import Testimonials from './components/testimonials'
+import Together from './components/together'
 
 
 
@@ -21,7 +22,8 @@ const App = () => {
       <About/>
       <Services/>
       <Projects/>
-      <Testimonials/>
+      <FAQ/>
+      <Together/>
 
     </div>
 
