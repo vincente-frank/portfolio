@@ -42,11 +42,25 @@ const Navigation = () => {
             backdrop-blur-3xl ">
                 <nav className="flex flex-col items-start justify-start
                 p-6 text-dusty-grey capitalize ">
-                    <a href="#">home</a>
-                    <a href="#">experiences</a>
-                    <a href="#">works</a>
-                    <a href="#">testimonials</a>
-                    <a href="#">say hello</a>
+                    <a href="#hero" onClick={ ()=> setMenu(!menu) }
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] py-1 ">home</a>
+                    <a href="#services" onClick={ ()=> setMenu(!menu) }
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] py-1 ">services</a>
+                    <a href="#projects" onClick={ ()=> setMenu(!menu) }
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] py-1 ">works</a>
+                    <a href="#faq" onClick={ ()=> setMenu(!menu) }
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] py-1 ">faq</a>
+                    <a href="#footer" onClick={ ()=> setMenu(!menu) }
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] py-1 ">get in touch</a>
+                    <a href="#together" onClick={ ()=> setMenu(!menu) }
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] bg-charcoal-brown px-2 py-1 rounded-[.3rem]
+                    my-3 ">start a project</a>
                 </nav>
             </div>
         ) }
@@ -68,16 +82,26 @@ const Navigation = () => {
             <div>
                 <nav className="flex items-center justify-center gap-6
                 p-6 text-dusty-olive capitalize ">
-                    <a href="#">home</a>
-                    <a href="#">experiences</a>
-                    <a href="#">works</a>
-                    <a href="#">testimonials</a>
-                    <a href="#">say hello</a>
+                    <a href="#hero"
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] ">home</a>
+                    <a href="#services"
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] ">services</a>
+                    <a href="#projects"
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] ">works</a>
+                    <a href="#faq"
+                    className="font-black tracking-wide font-ubuntu
+                    text-[20px] uppercase ">faq</a>
                 </nav>
             </div>
             {/* contact me div */}
-            <div>
-                <a href="#">start a project</a>
+            <div className="flex gap-6 items-center ">
+                <a href="#together"
+                className="font-black tracking-wide font-ubuntu
+                text-[20px] bg-charcoal-brown px-2 py-1 rounded-[.3rem]
+                my-3 ">start a project</a>
             </div>
         </section>
     </div>

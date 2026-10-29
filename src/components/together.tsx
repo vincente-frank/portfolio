@@ -7,8 +7,9 @@ const Together = () => {
 
     <div>
         {/* together section */}
-        <section className="min-h-screen h-auto p-6 bg-[url('/mountains.jpg')]
-        bg-cover bg-center bg-fixed relative text-dusty-grey m-4 rounded-[1rem] ">
+        <section id="together"
+        className="min-h-screen h-auto p-6 bg-[url('/mountains.jpg')]
+        bg-cover bg-center md:bg-fixed relative text-dusty-grey m-4 rounded-[1rem] ">
             {/* the overlay */}
             <div className="absolute inset-0 bg-gradient-to-t rounded-[1rem]
             from-olive-leaf via-olive-leaf/40 to-olive-leaf/20 "></div>
@@ -27,10 +28,10 @@ const Together = () => {
                     we can help your business grow.
                 </p>
                 <div className="py-3 flex gap-6 md:py-5 ">
-                    <a href="#"
+                    <a href="#contacts"
                     className="bg-charcoal-brown px-2 py-1 rounded-[.2rem] "
                     >get in touch</a>
-                    <a href="#"
+                    <a href="#services"
                     className="outline outline-offset-0 outline-khaki-beige
                     px-2 py-1 rounded-[.2rem] "
                     >explore services</a>

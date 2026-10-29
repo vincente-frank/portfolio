@@ -8,7 +8,8 @@ const Contacts = () => {
 
     <div>
         {/* contacts section */}
-        <section className="min-h-screen h-auto p-6 text-dusty-grey ">
+        <section id="contacts"
+        className="min-h-screen h-auto p-6 text-dusty-grey ">
             {/* about me heading */}
             <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
             lowercase tracking-widest text-left "> [ 04 / contacts] </h2>
@@ -22,10 +23,11 @@ const Contacts = () => {
             md:grid-cols-2 md:gap-x-16 ">
                 {/* image div */}
                 <div>
-                    <img src="/mountains.jpg" alt="" 
+                    <img src="/port3.jpeg" alt="" 
                     className="aspect-square object-cover md:h-[30rem]
                     md:w-full rounded-[1rem] cursor-pointer hover:scale-103
-                    transition-all duration-700 ease-in-out "/>
+                    transition-all duration-700 ease-in-out
+                    object-top "/>
                 </div>
                 {/* contact form div */}
                 <div>
@@ -57,7 +59,7 @@ const Contacts = () => {
                             <textarea name="message" id="message" cols={8} rows={5} required
                             placeholder='Tell us about the project type, it requirements and aesthetic expectations...'
                             className='border-b border-khaki-beige w-full px-2 py-1
-                            placeholder:text-olive-leaf '
+                            placeholder:text-olive-leaf outline-none '
                             />
                         </div>
                         {/* send button */}

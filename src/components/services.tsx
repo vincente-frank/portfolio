@@ -7,7 +7,8 @@ const Services = () => {
 
     <div>
         {/* services section */}
-        <section className='min-h-screen h-auto p-6 text-dusty-grey '>
+        <section id='services'
+        className='min-h-screen h-auto p-6 text-dusty-grey '>
             {/* heading and description */}
             <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
             lowercase tracking-widest text-left "> [02 / services] </h2>
@@ -33,7 +34,7 @@ const Services = () => {
                         {/* arrow upright icon */}
                         <div className='rounded-full border border-khaki-beige
                         '>
-                            <a href="#"><ArrowUpRight className='size-8 p-1'/></a>
+                            <a href="#together"><ArrowUpRight className='size-8 p-1'/></a>
                         </div>
                     </div>
                     {/* the text */}
@@ -62,7 +63,7 @@ const Services = () => {
                         {/* arrow upright icon */}
                         <div className='rounded-full border border-khaki-beige
                         '>
-                            <a href="#"><ArrowUpRight className='size-8 p-1'/></a>
+                            <a href="#contacts"><ArrowUpRight className='size-8 p-1'/></a>
                         </div>
                     </div>
                     {/* the text */}
@@ -92,7 +93,7 @@ const Services = () => {
                         {/* arrow upright icon */}
                         <div className='rounded-full border border-khaki-beige
                         '>
-                            <a href="#"><ArrowUpRight className='size-8 p-1'/></a>
+                            <a href="#footer"><ArrowUpRight className='size-8 p-1'/></a>
                         </div>
                     </div>
                     {/* the text */}
@@ -122,7 +123,7 @@ const Services = () => {
                         {/* arrow upright icon */}
                         <div className='rounded-full border border-khaki-beige
                         '>
-                            <a href="#"><ArrowUpRight className='size-8 p-1'/></a>
+                            <a href="#contacts"><ArrowUpRight className='size-8 p-1'/></a>
                         </div>
                     </div>
                     {/* the text */}
@@ -152,7 +153,7 @@ const Services = () => {
                         {/* arrow upright icon */}
                         <div className='rounded-full border border-khaki-beige
                         '>
-                            <a href="#"><ArrowUpRight className='size-8 p-1'/></a>
+                            <a href="#together"><ArrowUpRight className='size-8 p-1'/></a>
                         </div>
                     </div>
                     {/* the text */}

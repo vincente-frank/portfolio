@@ -7,7 +7,8 @@ const About = () => {
 
     <div>
         {/* about me section */}
-        <section className="min-h-screen h-auto p-6 text-dusty-grey ">
+        <section id="about"
+        className="min-h-screen h-auto p-6 text-dusty-grey ">
             {/* about me heading */}
             <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
             lowercase tracking-widest text-left "> [ 01 / about Me] </h2>
@@ -20,8 +21,8 @@ const About = () => {
             <div className="grid grid-cols-1 items-center justify-center
             gap-y-6 md:grid-cols-2 md:items-start gap-x-24 ">
                 {/* image div */}
-                <div className="h-[23rem] w-full bg-[url('/grass.jpg')] bg-cover
-                bg-center relative ">
+                <div className="h-[23rem] w-full bg-[url('/port3.jpeg')] bg-cover
+                bg-[50%_20%] relative ">
                     {/* top overlay */}
                     <div className="absolute inset-0 bg-gradient-to-b from-charcoal-brown
                     via-transparent to-transparent "></div>
@@ -49,7 +50,7 @@ const About = () => {
                         saepe eius ad.
                     </p>
                     {/* work with me */}
-                    <a href="#"
+                    <a href="#contacts"
                     className="inline-block my-4 bg-olive-leaf px-2 py-1 rounded-[.3rem]
                     font-thin "
                     >let's work together!</a>

@@ -7,7 +7,8 @@ const Projects = () => {
 
     <div>
         {/* projects section */}
-        <section className='min-h-screen h-auto p-6 text-dusty-grey '>
+        <section id='projects'
+        className='min-h-screen h-auto p-6 text-dusty-grey '>
             {/* projects heading */}
             <div className='grid grid-cols-1 items-center justify-center gap-6
             md:grid-cols-12 md:items-start '>
@@ -27,7 +28,7 @@ const Projects = () => {
                         modern technology to create websites that look great
                         and deliver measurable value.
                     </p>
-                    <a href="#"
+                    <a href="#together"
                     className="inline-block my-4 bg-olive-leaf px-2 py-1 rounded-[.3rem]
                     font-thin ">start a project</a>
                 </div>
@@ -50,7 +51,8 @@ const Projects = () => {
                             capitalize text-[18px] leading-[2rem] md:text-[30px]
                             md:leading-[2.5rem] '>a premium brand with a new identity</p>
                             <div className='bg-charcoal-brown rounded-full ml-4 '>
-                                <a href="#">
+                                <a href="https://gwamaka.netlify.app/"
+                                target='_blank' rel='noopener noreferer'>
                                     <ArrowUpRight className='size-10 p-2'/> 
                                 </a>
                             </div>
@@ -75,7 +77,8 @@ const Projects = () => {
                             capitalize text-[18px] leading-[2rem] md:text-[30px]
                              '>a new identity for an ambitious brand</p>
                             <div className='bg-charcoal-brown rounded-full ml-4 '>
-                                <a href="#">
+                                <a href="https://decor-decoor.netlify.app/"
+                                target='_blank' rel='noopener noreferrer'>
                                     <ArrowUpRight className='size-10 p-2'/> 
                                 </a>
                             </div>
@@ -97,7 +100,8 @@ const Projects = () => {
                             capitalize text-[18px] leading-[2rem]
                              '>a premium brand with a new identity</p>
                             <div className='bg-charcoal-brown rounded-full ml-4 '>
-                                <a href="#">
+                                <a href="https://faadvocates.netlify.app/"
+                                target='_blank' rel='noopener noreferer'>
                                     <ArrowUpRight className='size-10 p-2'/> 
                                 </a>
                             </div>
@@ -115,7 +119,8 @@ const Projects = () => {
                             capitalize text-[18px] leading-[2rem]
                              '>a premium brand with a new identity</p>
                             <div className='bg-charcoal-brown rounded-full ml-4 '>
-                                <a href="#">
+                                <a href="https://james-pharmacy.netlify.app/"
+                                target='_blank' rel='noopener noreferer'>
                                     <ArrowUpRight className='size-10 p-2'/> 
                                 </a>
                             </div>

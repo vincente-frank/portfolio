@@ -13,7 +13,8 @@ const FAQ = () => {
 
     <div>
         {/* faq section */}
-        <section className="min-h-screen h-auto p-6 text-dusty-grey ">
+        <section id="faq"
+        className="min-h-screen h-auto p-6 text-dusty-grey ">
             {/* about me heading */}
             <h2 className="font-glitch font-thin pt-12 pb-3 text-[26px]
             capitalize tracking-widest text-left md:text-center md:text-[4rem]

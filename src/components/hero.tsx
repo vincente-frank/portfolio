@@ -37,8 +37,8 @@ const Hero = () => {
       </svg>
 
         {/* hero section */}
-        <section className="p-6 min-h-screen
-        h-auto " >
+        <section id="hero"
+        className="p-6 min-h-screen h-auto " >
             {/* navigation component */}
             <Navigation/>
             {/* content container div */}
@@ -66,7 +66,7 @@ const Hero = () => {
                     growth.
                 </p>
                 {/* start a project */}
-                <a href="#"
+                <a href="#together"
                 className="bg-khaki-beige px-2 py-1 rounded-[.2rem] text-charcoal-brown
                 font-black inline-block my-6 text-[18px] md:text-[20px] "
                 > start a project </a>
@@ -81,7 +81,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                src="/grass.jpg"
+                src="/port2.jpeg"
                 alt="Creative developer working"
                 className="h-full w-full object-cover"
                 />

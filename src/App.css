@@ -22,11 +22,11 @@
   --color-khaki-beige: #C2B9A5;
   --color-dusty-olive: #C2B9A5;
 
-  /* copy */
-  /* --color-charcoal-brown: #28271D;
-  --color-olive-leaf: #4E502C;
-  --color-dusty-grey: #D3D5D2;
-  --color-khaki-beige: #C2B9A5;
-  --color-dusty-olive: #C2B9A5; */
-
 };
+
+
+
+
+html, body {
+  scroll-behavior: smooth;
+}
