@@ -1,41 +1,77 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowUpRight } from 'lucide-react'
 
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Projects = () => {
+
+    function projectsAnimation ():gsap.core.Timeline {
+        let projectSection = document.querySelector(".projects")
+        let project = document.querySelector(".projects3")
+        let title = document.querySelector(".project-title")
+        let description = document.querySelector(".project-description")
+        let link = document.querySelector(".project-link")
+        let projectContainer = document.querySelector(".projects-container")
+        let duration = 0.7
+        gsap.defaults({duration:duration})
+        const projectTimeline = gsap.timeline()
+        .from(project, {opacity:0, xPercent:-250, ease:"back"})
+        .from(title, {opacity:0, y:80})
+        .from(description, {opacity:0, y:80})
+        .from(link, {opacity:0, y:80, scale:0.3})
+        .from(projectContainer, {opacity:0, y:80})
+
+        // scroll triggered animation
+        ScrollTrigger.create({
+            animation: projectTimeline,
+            trigger: projectSection,
+            start: "top 80%",
+            end: "bottom 10%",
+            toggleActions: "restart none none reverse"
+        })
+        return projectTimeline;
+    }
+
+    useGSAP ( ()=> { projectsAnimation() }, [] )
 
   return (
 
     <div>
         {/* projects section */}
         <section id='projects'
-        className='min-h-screen h-auto p-6 text-dusty-grey '>
+        className='min-h-screen h-auto p-6 text-dusty-grey projects '>
             {/* projects heading */}
             <div className='grid grid-cols-1 items-center justify-center gap-6
             md:grid-cols-12 md:items-start '>
                 {/* right heading */}
                 <div className='md:col-span-5'>
                 <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
-                lowercase tracking-widest text-left "> [03 / projects] </h2>
+                lowercase tracking-widest text-left projects3
+                 "> [03 / projects] </h2>
                 <h2 className='font-glitch font-thin capitalize text-[24px]
-                py-3 tracking-widest md:text-[44px] '>turning ideas into real outcomes</h2>
+                py-3 tracking-widest md:text-[44px] project-title
+                 '>turning ideas into real outcomes</h2>
                 </div>
                 {/* left heading */}
                 <div className='text-left md:text-right md:pt-[10rem]
                 md:col-span-7 '>
                     <p className='tracking-wide text-[18px] leading-[2rem] py-3
-                    md:text-[20px] md:leading-[2.5rem] '>
+                    md:text-[20px] md:leading-[2.5rem] project-description '>
                         We combine strategic thinking, refined design and
                         modern technology to create websites that look great
                         and deliver measurable value.
                     </p>
                     <a href="#together"
                     className="inline-block my-4 bg-olive-leaf px-2 py-1 rounded-[.3rem]
-                    font-thin ">start a project</a>
+                    font-thin project-link ">start a project</a>
                 </div>
             </div>
             {/* projects */}
             <div className='grid grid-cols-1 gap-8 items-center justify-center
-            md:grid-cols-12 md:items-start py-12 '>
+            md:grid-cols-12 md:items-start py-12 projects-container '>
                 {/* right div */}
                 <div className='md:col-span-5'>
                     {/* real estates div */}

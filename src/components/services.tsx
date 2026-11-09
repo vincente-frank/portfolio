@@ -1,30 +1,82 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowUpRight, CodeIcon, GlobeCode, HeartHandshakeIcon, ScanEyeIcon, SearchIcon } from 'lucide-react'
 
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Services = () => {
+
+    function servicesAnimation ():gsap.core.Timeline {
+        let serviceSection = document.querySelector(".services")
+        let title = document.querySelector(".services-title")
+        let description = document.querySelector(".services-description")
+        let serviceDivs = gsap.utils.toArray<HTMLElement>(".service")
+        let duration = 0.7
+        gsap.defaults({duration:duration})
+        const matchmedia = gsap.matchMedia()
+        const serviceTimeline = gsap.timeline()
+
+        // mobile view animation
+        matchmedia.add( " (max-width: 799px) ", ()=> {
+            serviceTimeline.from(title, {opacity:0, xPercent:-250})
+            serviceTimeline.from(description, {opacity:0, y:80, ease:"back"})
+            serviceDivs.forEach( (serviceDiv)=> {
+                serviceTimeline.from(serviceDiv, {opacity:0, scale:0.3,
+                    stagger:0.05, y:80})
+            } )
+        } );
+
+        // desktop view animation
+        matchmedia.add( " (min-width: 800px) ", ()=> {
+            serviceTimeline.from(title, {opacity:0, xPercent:-250})
+            serviceTimeline.from(description, {opacity:0, y:80, ease:"back"})
+            serviceDivs.forEach( (serviceDiv)=> {
+                serviceTimeline.from(serviceDiv, {opacity:0, scale:0.3,
+                    stagger:0.05, y:80, duration:0.5})
+            } )
+            
+        } )
+
+        // scroll triggered animation
+        ScrollTrigger.create({
+            animation: serviceTimeline,
+            trigger: serviceSection,
+            start: "top 80%",
+            end: "bottom 10%",
+            toggleActions: "restart none none reverse"
+        })
+
+
+        return serviceTimeline;
+    }
+
+    useGSAP ( ()=> { servicesAnimation() }, [] )
 
   return (
 
     <div>
         {/* services section */}
         <section id='services'
-        className='min-h-screen h-auto p-6 text-dusty-grey '>
+        className='min-h-screen h-auto p-6 text-dusty-grey services '>
             {/* heading and description */}
             <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
-            lowercase tracking-widest text-left "> [02 / services] </h2>
+            lowercase tracking-widest text-left services-title
+             "> [02 / services] </h2>
             <p className="pt-3 pb-12 tracking-widest leading-[2rem] text-left
-            text-[18px] ">
+            text-[18px] services-description ">
                 End-to-end support, from the first conccept to launch and
                 continued growth.
             </p>
             {/* services container div */}
             <div className='grid grid-cols-1 items-center justify-center
-            gap-y-8 md:grid-cols-3 md:gap-x-6 py-12 '>
+            gap-y-8 md:grid-cols-3 md:gap-x-6 py-12 services-container '>
 
                 {/* custom website development */}
                 <div className='p-3 border border-khaki-beige rounded-[.2rem]
                 hover:scale-103 duration-700 ease-in-out duration-700
-                cursor-pointer '>
+                cursor-pointer service '>
                     {/* icons */}
                     <div className='flex items-center justify-between
                     py-3 '>
@@ -53,7 +105,7 @@ const Services = () => {
                 {/* mobile applicationdevelopment */}
                 <div className='p-3 border border-khaki-beige rounded-[.2rem]
                 hover:scale-103 duration-700 ease-in-out duration-700
-                cursor-pointer md:col-span-2 md:h-[15rem] '>
+                cursor-pointer md:col-span-2 md:h-[15rem] service '>
                     {/* icons */}
                     <div className='flex items-center justify-between
                     py-3 '>
@@ -83,7 +135,7 @@ const Services = () => {
                 {/* SEO Ranking */}
                 <div className='p-3 border border-khaki-beige rounded-[.2rem]
                 hover:scale-103 duration-700 ease-in-out duration-700
-                cursor-pointer '>
+                cursor-pointer service '>
                     {/* icons */}
                     <div className='flex items-center justify-between
                     py-3 '>
@@ -113,7 +165,7 @@ const Services = () => {
                 {/* support and growth */}
                 <div className='p-3 border border-khaki-beige rounded-[.2rem]
                 hover:scale-103 duration-700 ease-in-out duration-700
-                cursor-pointer '>
+                cursor-pointer service '>
                     {/* icons */}
                     <div className='flex items-center justify-between
                     py-3 '>
@@ -143,7 +195,7 @@ const Services = () => {
                 {/* brand identity */}
                 <div className='p-3 border border-khaki-beige rounded-[.2rem]
                 hover:scale-103 duration-700 ease-in-out duration-700
-                cursor-pointer '>
+                cursor-pointer service '>
                     {/* icons */}
                     <div className='flex items-center justify-between
                     py-3 '>
@@ -170,6 +222,7 @@ const Services = () => {
                 </div>
 
             </div>
+
         </section>
     </div>
 

@@ -1,3 +1,5 @@
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 import { MenuIcon, XIcon } from "lucide-react"
 import { useState } from "react"
 
@@ -7,6 +9,16 @@ const Navigation = () => {
 
     const [menu, setMenu] = useState<boolean>(false)
 
+    function navAnimation ():gsap.core.Timeline {
+        let nav = document.querySelectorAll(".nav")
+        let duration = 0.7
+        const timeline = gsap.timeline()
+        .from(nav, {y:-80, duration:duration, ease:"none"})
+        return timeline;
+    }
+
+    useGSAP ( ()=> { navAnimation() }, [] )
+
   return (
 
     <div>
@@ -14,7 +26,7 @@ const Navigation = () => {
         <section className="h-auto bg-dusty-grey/10 flex items-center
         justify-between p-2 rounded-[.5rem] backdrop-blur-3xl border
         md:hidden border-khaki-beige m-0 fixed top-3 left-6 right-6
-        z-10 ">
+        z-10 nav ">
             {/* logo div */}
             <div>
                 <h1 className="font-black capitalize font-nunito
@@ -69,7 +81,7 @@ const Navigation = () => {
         <section className="h-auto bg-dusty-grey/10 md:flex items-center
         justify-between px-3 rounded-[.5rem] backdrop-blur-xl hidden
         m-0 border border-khaki-beige text-dusty-olive fixed left-6
-        right-6 z-10 ">
+        right-6 z-10 nav ">
             {/* logo div */}
             <div>
                 <h1 className="font-black capitalize font-nunito
