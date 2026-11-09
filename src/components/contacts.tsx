@@ -10,7 +10,7 @@ const Contacts = () => {
         {/* contacts section */}
         <section id="contacts"
         className="min-h-screen h-auto p-6 text-dusty-grey ">
-            {/* about me heading */}
+            {/* heading */}
             <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
             lowercase tracking-widest text-left "> [ 04 / contacts] </h2>
             {/* about description */}
