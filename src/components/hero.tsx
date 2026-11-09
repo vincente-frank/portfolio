@@ -10,11 +10,9 @@ const Hero = () => {
   function heroAnimation ():gsap.core.Timeline {
     let hero = document.querySelector(".hero")
     let rightContent = document.querySelector(".right-content")
-    let leftContent = document.querySelector(".left-content")
     let creative = document.querySelector(".creative")
     let brand = document.querySelector(".brand")
     let possibilities = document.querySelector(".new")
-    let title = document.querySelector(".title")
     let description = document.querySelector(".description")
     let link = document.querySelector(".link")
     let duration = 0.7
