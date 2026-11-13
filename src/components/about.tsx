@@ -81,9 +81,12 @@ const About = () => {
             lowercase tracking-widest text-left about-me
              "> [ 01 / about Me] </h2>
             {/* about description */}
-            <p className="pt-3 pb-12 tracking-widest leading-[2rem] text-left
-            text-[18px] about-lorem ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <p className="pt-3 pb-12 tracking-widest leading-[2rem]
+            text-left text-[18px] about-lorem ">
+            I build what <span className="text-khaki-beige font-thin
+            uppercase font-glitch saturate-200 tracking-[.3rem]
+            text-[1.3rem] ">a business runs on, </span>
+            and ship it.
             </p>
             {/* container div for about content */}
             <div className="grid grid-cols-1 items-center justify-center
@@ -113,11 +116,16 @@ const About = () => {
                     {/* about me */}
                     <p className="py-3 text-[18px] tracking-widest leading-[2rem]
                     about-description ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Laudantium ipsam voluptatum suscipit, nostrum laborum
-                        neque ad asperiores? Numquam, ut commodi nostrum nihil
-                        officia ipsam repellat dolore voluptatem assumenda iure,
-                        saepe eius ad.
+                    I am a <span className="text-khaki-beige font-black saturate-200
+                    font-glitch font-thin">creative</span> web and full stack developer, focusing on
+                    creating a brand visual identity of an organisation, business,
+                    and entrprises.
+                    I build real animated, cinematic softwares that capture attention
+                    of leads and turn them into paying clients without cutting the 
+                    parts that matter.
+                    Whether that's a full <span className=" text-khaki-beige font-black
+                    saturate-200 ">platform,</span> a website or an automation
+                    around a business.
                     </p>
                     {/* work with me */}
                     <a href="#contacts"

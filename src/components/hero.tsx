@@ -105,7 +105,7 @@ const Hero = () => {
                 {/* creative developer */}
                 <p className="text-dusty-grey font-kempt text-[14px] py-3
                 uppercase font-thin tracking-widest creative
-                 "> a creative developer</p>
+                 "> creative developers</p>
                 {/* hero title */}
                 <h1 className="py-3 text-[18px] capitalize font-thin font-glitch
                 tracking-widest leading-[2rem] md:text-[2.8rem] md:leading-[4rem]
@@ -118,7 +118,7 @@ const Hero = () => {
                 {/* hero description */}
                 <p className="py-3 text-[16px] leading-[2rem] md:text-[30px]
                 md:leading-[3rem] md:py-4 description " >
-                    We create midern websites that strengthen your image,
+                    We create modern websites that strengthen your image,
                     attract clients and turn your business goals into real
                     growth.
                 </p>
