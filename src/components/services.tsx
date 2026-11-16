@@ -66,8 +66,8 @@ const Services = () => {
              "> [02 / services] </h2>
             <p className="pt-3 pb-12 tracking-widest leading-[2rem] text-left
             text-[18px] services-description ">
-                End-to-end support, from the first conccept to launch and
-                continued growth.
+            We provide end-to-end support, from the first concept to launch and
+            continued growth.
             </p>
             {/* services container div */}
             <div className='grid grid-cols-1 items-center justify-center

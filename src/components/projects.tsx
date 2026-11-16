@@ -53,7 +53,7 @@ const Projects = () => {
                  "> [03 / projects] </h2>
                 <h2 className='font-glitch font-thin capitalize text-[24px]
                 py-3 tracking-widest md:text-[44px] project-title
-                 '>turning ideas into real outcomes</h2>
+                 '>We turn ideas into real outcomes</h2>
                 </div>
                 {/* left heading */}
                 <div className='text-left md:text-right md:pt-[10rem]
@@ -61,7 +61,7 @@ const Projects = () => {
                     <p className='tracking-wide text-[18px] leading-[2rem] py-3
                     md:text-[20px] md:leading-[2.5rem] project-description '>
                         We combine strategic thinking, refined design and
-                        modern technology to create websites that look great
+                        modern technology to create software that look great
                         and deliver measurable value.
                     </p>
                     <a href="#together"

@@ -1,5 +1,6 @@
 import './App.css'
 import About from './components/about'
+import Concept from './components/concept'
 import Contacts from './components/contacts'
 import FAQ from './components/faq'
 import Footer from './components/footer'
@@ -23,6 +24,7 @@ const App = () => {
       
       <Hero/>
       <About/>
+      <Concept/>
       <Services/>
       <Projects/>
       <FAQ/>

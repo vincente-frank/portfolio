@@ -79,11 +79,11 @@ const About = () => {
             {/* about me heading */}
             <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
             lowercase tracking-widest text-left about-me
-             "> [ 01 / about Me] </h2>
+             "> [ 01 / about us] </h2>
             {/* about description */}
             <p className="pt-3 pb-12 tracking-widest leading-[2rem]
             text-left text-[18px] about-lorem ">
-            I build what <span className="text-khaki-beige font-thin
+            We build what <span className="text-khaki-beige font-thin
             uppercase font-glitch saturate-200 tracking-[.3rem]
             text-[1.3rem] ">a business runs on, </span>
             and ship it.
@@ -91,9 +91,10 @@ const About = () => {
             {/* container div for about content */}
             <div className="grid grid-cols-1 items-center justify-center
             gap-y-6 md:grid-cols-2 md:items-start gap-x-24 ">
+
                 {/* image div */}
-                <div className="h-[23rem] w-full bg-[url('/port3.jpeg')] bg-cover
-                bg-[50%_20%] relative about-image ">
+                <div className="h-[23rem] w-full bg-[url('/vinjo-logo.png')]
+                bg-cover bg-[50%_20%] relative about-image ">
                     {/* top overlay */}
                     <div className="absolute inset-0 bg-gradient-to-b from-charcoal-brown
                     via-transparent to-transparent "></div>
@@ -107,25 +108,36 @@ const About = () => {
                     <div className="absolute inset-0 bg-gradient-to-l from-charcoal-brown
                     via-transparent to-transparent "></div>
                 </div>
+
                 {/* text div */}
                 <div className="font-ubuntu py-6 about-text ">
                     {/* greetings */}
-                    <h2 className="font-kempt capitalize trackking-widest font-black
-                    py-3 text-[24px] leading-[3rem] about-hi
-                     ">hi i'm Frank Vincent</h2>
+                    <h2 className="font-glitch capitalize trackking-[.2rem]
+                    font-thin py-3 text-[24px] leading-[3rem]
+                    uppercase about-hi
+                     ">we <span className="px-1 text-[burlywood] saturate-200
+                     ">build</span> web3, fintech and ai <span className="
+                     px-1 text-[burlywood] saturate-200 ">products</span></h2>
                     {/* about me */}
                     <p className="py-3 text-[18px] tracking-widest leading-[2rem]
                     about-description ">
-                    I am a <span className="text-khaki-beige font-black saturate-200
-                    font-glitch font-thin">creative</span> web and full stack developer, focusing on
-                    creating a brand visual identity of an organisation, business,
-                    and entrprises.
-                    I build real animated, cinematic softwares that capture attention
+                    Vinjo is an African based software, product-oriented company
+                    that helps mid-sized businesses, organizations, enterprises
+                    and startups design, build, and scale mission-critical systems.
+                    We combine senoir-led teams, proven delivery frameworks, and
+                    AI-augmented development to deliver software faster-without
+                    compromising quality, reliability, security and speed.
+                    {/* We are a <span className="text-khaki-beige font-black
+                    saturate-200 font-glitch font-thin">creative&nbsp;</span>
+                    software company, packed with experienced professionals,
+                    whom focus on creating a brand visual identity of organisations,
+                    businesses, and entrprises. <br /> */}
+                    {/* We build real animated, cinematic softwares that capture attention
                     of leads and turn them into paying clients without cutting the 
                     parts that matter.
                     Whether that's a full <span className=" text-khaki-beige font-black
                     saturate-200 ">platform,</span> a website or an automation
-                    around a business.
+                    around a business. */}
                     </p>
                     {/* work with me */}
                     <a href="#contacts"
@@ -133,6 +145,7 @@ const About = () => {
                     font-thin about-link "
                     >let's work together!</a>
                 </div>
+
             </div>
         </section>
     </div>

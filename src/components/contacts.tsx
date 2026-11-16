@@ -67,7 +67,7 @@ const Contacts = () => {
             md:grid-cols-2 md:gap-x-16 ">
                 {/* image div */}
                 <div className="image-div">
-                    <img src="/port3.jpeg" alt="" 
+                    <img src="/vinjo-logo.png" alt="" 
                     className="aspect-square object-cover md:h-[30rem]
                     md:w-full rounded-[1rem] cursor-pointer hover:scale-103
                     transition-all duration-700 ease-in-out

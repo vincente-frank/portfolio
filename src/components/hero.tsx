@@ -118,7 +118,7 @@ const Hero = () => {
                 {/* hero description */}
                 <p className="py-3 text-[16px] leading-[2rem] md:text-[30px]
                 md:leading-[3rem] md:py-4 description " >
-                    We create modern websites that strengthen your image,
+                    We create modern software that strengthen your image,
                     attract clients and turn your business goals into real
                     growth.
                 </p>
@@ -138,7 +138,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                src="/port2.jpeg"
+                src="/vinjo-logo.png"
                 alt="Creative developer working"
                 className="h-full w-full object-cover"
                 />
