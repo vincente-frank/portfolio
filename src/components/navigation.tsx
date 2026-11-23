@@ -50,7 +50,7 @@ const Navigation = () => {
         {/* navigation drawer to smaller screen devices */}
         { menu && (
             <div className="bg-charcoal-brown/20 h-auto border-b z-10
-            border-khaki-beige fixed top-[4.4rem] left-6 right-6
+            border-khaki-beige fixed top-[5.9rem] left-6 right-6
             backdrop-blur-3xl ">
                 <nav className="flex flex-col items-start justify-start
                 p-6 text-dusty-grey capitalize ">
