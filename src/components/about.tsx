@@ -93,7 +93,7 @@ const About = () => {
             gap-y-6 md:grid-cols-2 md:items-start gap-x-24 ">
 
                 {/* image div */}
-                <div className="h-[23rem] w-full bg-[url('/vinjo-logo.png')]
+                <div className="h-[23rem] w-full bg-[url('/vinjo-logo.svg')]
                 bg-cover bg-[50%_20%] relative about-image ">
                     {/* top overlay */}
                     <div className="absolute inset-0 bg-gradient-to-b from-charcoal-brown

@@ -50,34 +50,72 @@ const Contacts = () => {
   return (
 
     <div>
+
+      {/* SVG clip definition */}
+      <svg
+        className="absolute h-0 w-0"
+        aria-hidden="true"
+      >
+        <defs>
+          <clipPath
+            id="heroBlob"
+            clipPathUnits="objectBoundingBox"
+          >
+            <path
+              d="
+                M 0.18 0.07
+                C 0.38 0.00, 0.72 0.00, 0.88 0.07
+                C 1.00 0.14, 1.00 0.30, 0.97 0.43
+                C 0.93 0.56, 0.78 0.63, 0.66 0.73
+                C 0.57 0.81, 0.48 0.93, 0.38 1.00
+                C 0.24 1.00, 0.13 0.86, 0.09 0.68
+                C 0.05 0.50, 0.10 0.27, 0.18 0.07
+                Z
+              "
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
         {/* contacts section */}
         <section id="contacts"
         className="min-h-screen h-auto p-6 text-dusty-grey contact ">
-            {/* heading */}
-            <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
-            lowercase tracking-widest text-left contact-title
-             "> [ 04 / contacts] </h2>
-            {/* about description */}
-            <p className="pt-3 pb-12 tracking-widest leading-[2rem] text-left
-            text-[18px] contact-description ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            {/* contacts div container */}
-            <div className="grid grid-cols-1 items-start gap-6
-            md:grid-cols-2 md:gap-x-16 ">
-                {/* image div */}
-                <div className="image-div">
-                    <img src="/vinjo-logo.png" alt="" 
-                    className="aspect-square object-cover md:h-[30rem]
-                    md:w-full rounded-[1rem] cursor-pointer hover:scale-103
-                    transition-all duration-700 ease-in-out
-                    object-top "/>
-                </div>
-                {/* contact form div */}
-                <div className="contact-form">
-                    <form action="#">
-                        {/* name */}
-                        <label htmlFor="name"
+        {/* heading */}
+        <h2 className="font-ubuntu font-black pt-12 pb-3 text-[26px]
+        lowercase tracking-widest text-left contact-title
+        "> [ 04 / contacts] </h2>
+        {/* about description */}
+        <p className="pt-3 pb-12 tracking-widest leading-[2rem] text-left
+        text-[18px] contact-description ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+
+        {/* contacts div container */}
+        <div className="grid grid-cols-1 items-start gap-6
+        md:grid-cols-2 md:gap-x-16 ">
+
+        {/* the image content div */}
+        <div className="relative w-full -ml-[5%] right-content">
+            <div
+            className="aspect-[1.1/1] w-full"
+            style={{
+            clipPath: "url(#heroBlob)",
+            }}
+            >
+                <img
+                src="/vinjo-logo.svg"
+                alt="Creative developer working"
+                className="h-full w-full object-cover"
+                />
+            </div>
+
+        </div>
+                
+        {/* contact form div */}
+        <div className="contact-form">
+            <form action="#">
+            {/* name */}
+            <label htmlFor="name"
                         className='font-nunito uppercase flex flex-col gap-y-3 py-3 border-b
                         border-khaki-beige tracking-widest '
                         >your name
@@ -85,9 +123,9 @@ const Contacts = () => {
                             className='outline-none border-none placeholder:text-olive-leaf
                             px-2 py-1 '
                             />
-                        </label>
-                        {/* email */}
-                        <label htmlFor="email"
+            </label>
+            {/* email */}
+            <label htmlFor="email"
                         className='font-nunito uppercase flex flex-col gap-y-3 pt-8 border-b
                         border-khaki-beige tracking-wide'
                         >email address
@@ -95,24 +133,24 @@ const Contacts = () => {
                             className='outline-none border-none placeholder:text-olive-leaf
                             px-2 py-1 '
                             />
-                        </label>
-                        {/* message */}
-                        <div>
-                            <p className='font-nunito uppercase pt-8 tracking-wide pb-2
-                            '> project specifications</p>
-                            <textarea name="message" id="message" cols={8} rows={5} required
-                            placeholder='Tell us about the project type, it requirements and aesthetic expectations...'
-                            className='border-b border-khaki-beige w-full px-2 py-1
-                            placeholder:text-olive-leaf outline-none '
-                            />
-                        </div>
-                        {/* send button */}
-                        <button className='mt-4 bg-white text-black px-2 py-1 mb-6
-                        rounded-[.5rem] font-black font-mono capitalize cursor-pointer '
-                        >send message</button>
-                    </form>
-                </div>
+            </label>
+            {/* message */}
+            <div>
+            <p className='font-nunito uppercase pt-8 tracking-wide pb-2
+            '> project specifications</p>
+            <textarea name="message" id="message" cols={8} rows={5} required
+            placeholder='Tell us about the project type, it requirements and aesthetic expectations...'
+            className='border-b border-khaki-beige w-full px-2 py-1
+            placeholder:text-olive-leaf outline-none '
+            />
             </div>
+            {/* send button */}
+            <button className='mt-4 bg-white text-black px-2 py-1 mb-6
+            rounded-[.5rem] font-black font-mono capitalize cursor-pointer '
+            >send message</button>
+            </form>
+        </div>
+        </div>
         </section>
     </div>
 
