@@ -23,27 +23,27 @@ const Navigation = () => {
 
     <div>
         {/* navigation on smaller screens */}
-        <section className="h-auto bg-dusty-grey/10 flex items-center
-        justify-between p-2 rounded-[.5rem] backdrop-blur-3xl border
+        <section className="h-14 bg-dusty-grey/10 flex items-center
+        justify-between px-2 rounded-[.5rem] backdrop-blur-3xl border
         md:hidden border-khaki-beige m-0 fixed top-3 left-6 right-6
-        z-10 nav ">
+        z-10 mt-6 nav ">
             {/* logo div */}
             <div>
-                <h1 className="font-black capitalize font-nunito
-                tracking-widest text-dusty-olive ">
-                    <span>frank</span>
-                    <span>&nbsp;vincent</span>
+                <h1 className="font-glitch tracking-widest
+                text-lg text-white ">
+                    <span className="text-[1.4rem]">v</span>
+                    <span>injo.</span>
                 </h1>
             </div>
             {/* changing icons logic div */}
-            <div className="bg-charcoal-brown rounded-full text-dusty-grey
-            p-2 ">
+            <div className="bg-charcoal-brown rounded-full
+            text-dusty-grey p-2 ">
                 { menu ? (
                     <XIcon onClick={ ()=> setMenu(!menu) }
-                    className="cursor-pointer" />
+                    className="cursor-pointer size-6 " />
                 ):(
                     <MenuIcon onClick={ ()=> setMenu(!menu) }
-                    className="cursor-pointer" />
+                    className="cursor-pointer size-6 " />
                 ) }
             </div>
         </section>
@@ -71,23 +71,24 @@ const Navigation = () => {
                     text-[20px] py-1 ">get in touch</a>
                     <a href="#together" onClick={ ()=> setMenu(!menu) }
                     className="font-black tracking-wide font-ubuntu
-                    text-[20px] bg-charcoal-brown px-2 py-1 rounded-[.3rem]
+                    text-[20px] bg-charcoal-brown px-2 py-1
+                    rounded-[.3rem] saturate-200
                     my-3 ">start a project</a>
                 </nav>
             </div>
         ) }
 
         {/* navigation on medium to larger screens */}
-        <section className="h-auto bg-dusty-grey/10 md:flex items-center
+        <section className="bg-dusty-grey/10 md:flex items-center
         justify-between px-3 rounded-[.5rem] backdrop-blur-xl hidden
         m-0 border border-khaki-beige text-dusty-olive fixed left-6
-        right-6 z-10 nav ">
+        right-6 z-10 nav h-16 ">
             {/* logo div */}
             <div>
-                <h1 className="font-black capitalize font-nunito
-                tracking-widest ">
-                    <span>frank</span>
-                    <span>&nbsp;vincent</span>
+                <h1 className="font-glitch tracking-widest
+                text-lg text-white ">
+                    <span className="text-[1.4rem]">v</span>
+                    <span>injo.</span>
                 </h1>
             </div>
             {/* navigation div */}
@@ -112,7 +113,8 @@ const Navigation = () => {
             <div className="flex gap-6 items-center ">
                 <a href="#together"
                 className="font-black tracking-wide font-ubuntu
-                text-[20px] bg-charcoal-brown px-2 py-1 rounded-[.3rem]
+                text-[20px] bg-charcoal-brown px-2 py-1
+                rounded-[.3rem] saturate-200
                 my-3 ">start a project</a>
             </div>
         </section>

@@ -14,7 +14,8 @@ const Footer = () => {
     <div>
         {/* footer section */}
         <section id="footer"
-        className="p-6 h-auto text-dusty-grey font-ubuntu ">
+        className="p-6 h-auto text-dusty-grey font-ubuntu
+        bg-black ">
             {/* upper div */}
             <div className="grid grid-cols-1 md:grid-cols-3 pt-12
             md:gap-x-56 ">
@@ -23,11 +24,11 @@ const Footer = () => {
                     <h1 className="font-black capitalize font-nunito
                     tracking-widest text-dusty-olive text-[24px]
                     md:text-[50px] ">
-                    <span>frank</span>
-                    <span>&nbsp;vincent</span>
+                    <span>vinjo</span>
+                    <span>&nbsp;solutions</span>
                 </h1>
                 <p className="py-2 tracking-wide md:text-[26px]
-                ">Experienced website developer</p>
+                ">Experienced software developers</p>
                 {/* email */}
                 <div className="flex items-center py-2 gap-x-2 ">
                     <MailIcon/>
@@ -58,7 +59,7 @@ const Footer = () => {
                         <a href="#about"
                         className="capitalize md:text-[20px] py-1 ">about me</a>
                         <a href="#projects"
-                        className="capitalize md:text-[20px] py-1 ">my works</a>
+                        className="capitalize md:text-[20px] py-1 ">our works</a>
                         <a href="#faq"
                         className="uppercase md:text-[20px] py-1 ">FAQ</a>
                     </nav>

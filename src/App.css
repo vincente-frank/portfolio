@@ -30,3 +30,7 @@
 html, body {
   scroll-behavior: smooth;
 }
+
+.logo {
+  border-radius: 50%;
+}

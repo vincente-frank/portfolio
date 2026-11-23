@@ -9,7 +9,6 @@ const Hero = () => {
 
   function heroAnimation ():gsap.core.Timeline {
     let hero = document.querySelector(".hero")
-    let rightContent = document.querySelector(".right-content")
     let creative = document.querySelector(".creative")
     let brand = document.querySelector(".brand")
     let possibilities = document.querySelector(".new")
@@ -33,8 +32,6 @@ const Hero = () => {
         ease:"bounce"},"-=0.4")
     heroTimeline.from(link, {opacity:0, scale:0.3, x:200, duration:duration,
          ease:"back"},"-=0.5")
-    heroTimeline.from(rightContent, {opacity:0, duration:duration, y:80})
-
     } );
 
     // desktop view animation
@@ -48,7 +45,6 @@ const Hero = () => {
       ease:"back"},"-=0.4")
     heroTimeline.from(brand, {opacity:0, xPercent:-100, duration:duration,
       ease:"back"},"<")
-      heroTimeline.from(rightContent, {opacity:0, duration:duration, y:80},"<")
     heroTimeline.from(description, {opacity:0, duration:duration, y:80,
         ease:"bounce"},"-=0.4")
     heroTimeline.from(link, {opacity:0, scale:0.3, x:200, duration:duration,
@@ -72,7 +68,7 @@ const Hero = () => {
           {/* the overlay */}
           <div className="absolute inset-0 bg-gradient-to-t
           from-charcoal-brown via-charcoal-brown/50
-          to-transparent "></div>
+          to-transparent md:via-transparent "></div>
             {/* navigation component */}
             <Navigation/>
             {/* content container div */}
@@ -88,21 +84,32 @@ const Hero = () => {
                 {/* hero title */}
                 <h1 className="py-3 text-[18px] capitalize font-thin font-glitch
                 tracking-widest leading-[2rem] md:text-[2.8rem] md:leading-[4rem]
-                md:py-4 title ">
+                md:py-4 md:pr-[12rem] title ">
                 <span className="inline-block new text-white saturate-200
                 ">new possibilities for</span>
                 <span className="inline-block text-khaki-beige saturate-200
                 brand ">&nbsp;ambitious brands</span>
                 </h1>
-                {/* hero description */}
+                {/* hero description in smaller devices */}
                 <p className="py-3 text-[16px] leading-[2rem] md:text-[30px]
-                md:leading-[3rem] md:py-4 description " >
+                md:leading-[3rem] md:py-4 md:hidden description " >
                 We create <span className="inline-block text-white 
                 saturate-200 font-thin tracking-widest font-glitch
                 ">modern</span> software that strengthen
                 your image, attract clients and turn your business
                 goals into real growth.
                 </p>
+
+                {/* hero description in medium to larger devices */}
+                <p className="py-3 text-[16px] leading-[2rem] md:text-[30px]
+                md:leading-[3rem] md:py-4 hidden md:block description " >
+                We create <span className="inline-block text-white 
+                saturate-200 font-thin tracking-widest font-glitch
+                ">modern</span> software that strengthen
+                your image, <br /> attract clients and turn your business
+                goals into <br /> real growth.
+                </p>
+
                 {/* start a project */}
                 <a href="#together"
                 className="bg-khaki-beige px-2 py-1 rounded-[.2rem] text-charcoal-brown

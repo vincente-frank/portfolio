@@ -136,7 +136,7 @@ const Projects = () => {
                             capitalize text-[18px] leading-[2rem]
                              '>a premium brand with a new identity</p>
                             <div className='bg-charcoal-brown rounded-full ml-4 '>
-                                <a href="https://faadvocates.netlify.app/"
+                                <a href="https://fa-advocates.netlify.app/"
                                 target='_blank' rel='noopener noreferer'>
                                     <ArrowUpRight className='size-10 p-2'/> 
                                 </a>
@@ -155,7 +155,7 @@ const Projects = () => {
                             capitalize text-[18px] leading-[2rem]
                              '>a premium brand with a new identity</p>
                             <div className='bg-charcoal-brown rounded-full ml-4 '>
-                                <a href="https://james-pharmacy.netlify.app/"
+                                <a href="https://king-james-pharmacy.netlify.app/"
                                 target='_blank' rel='noopener noreferer'>
                                     <ArrowUpRight className='size-10 p-2'/> 
                                 </a>
@@ -166,6 +166,7 @@ const Projects = () => {
                 </div>
 
             </div>
+
         </section>
 
     </div>
