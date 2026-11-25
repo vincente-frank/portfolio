@@ -2,6 +2,7 @@ import { useForm } from "@formspree/react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef, useState } from "react"
 
 
 
@@ -11,6 +12,22 @@ const Contacts = () => {
 
     // form spree configuration
     const [state, handleSubmit] = useForm('xnpdodar');
+    const formRef = useRef<HTMLFormElement>(null);
+    const [showSuccess, setShowSuccess] = useState(false);
+
+    useEffect( ()=> {
+      if (state.succeeded) {
+        formRef.current?.reset();
+        setShowSuccess(true);
+
+        const timer = setTimeout(() => {
+            setShowSuccess(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+
+      }
+    }, [state.succeeded]);
 
 
     function contactAnimation ():gsap.core.Timeline {
@@ -51,14 +68,6 @@ const Contacts = () => {
     }
 
     useGSAP ( ()=> { contactAnimation() }, [] )
-
-    if (state.succeeded) {
-        return (
-            <div>
-                <p>form submitted well well</p>
-            </div>    
-        )
-    }
 
   return (
 
@@ -129,7 +138,7 @@ const Contacts = () => {
                 
         {/* contact form div */}
         <div className="contact-form">
-            <form onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit}>
             {/* name */}
             <label htmlFor="name"
             className='font-nunito uppercase flex flex-col gap-y-3 py-3 border-b
@@ -172,18 +181,27 @@ const Contacts = () => {
             placeholder:text-olive-leaf outline-none '
             />
             </div>
+            {/* success message */}
+            {showSuccess && (
+            <div>
+              <p>
+              Message sent successfully, we'll call you shortly.
+              </p>
+            </div>
+            )}
+
             {/* error handling */}
             {state.errors && (
-                    <div>
-                        <p>Something went wrong. Please try again.</p>
-                    </div>
-                )}
+              <div>
+                <p>Something went wrong. Please try again.</p>
+              </div>
+            )}
 
             {/* send button */}
             <button type="submit" disabled={state.submitting}
             className='mt-4 bg-white text-black px-2 py-1 mb-6
             rounded-[.5rem] font-black font-mono capitalize cursor-pointer '
-            >send message</button>
+            > {state.submitting?"Sending...":"Send message"} </button>
             </form>
         </div>
         </div>
