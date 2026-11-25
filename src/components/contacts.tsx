@@ -11,13 +11,7 @@ const Contacts = () => {
 
     // form spree configuration
     const [state, handleSubmit] = useForm('xnpdodar');
-    if (state.succeeded) {
-        return (
-            <div>
-                <p>form submitted well well</p>
-            </div>
-        )
-    }
+
 
     function contactAnimation ():gsap.core.Timeline {
         let constactSection = document.querySelector(".contact")
@@ -57,6 +51,14 @@ const Contacts = () => {
     }
 
     useGSAP ( ()=> { contactAnimation() }, [] )
+
+    if (state.succeeded) {
+        return (
+            <div>
+                <p>form submitted well well</p>
+            </div>    
+        )
+    }
 
   return (
 
@@ -140,12 +142,12 @@ const Contacts = () => {
             />
             </label>
             {/* phone number */}
-            <label htmlFor="phone number"
+            <label htmlFor="phone"
             className='font-nunito uppercase flex flex-col gap-y-3 py-3 border-b
             border-khaki-beige tracking-widest '
             >phone number
-            <input type="number" placeholder='+2557 66 355 608'
-            required name="phone number"
+            <input type="tel" placeholder='+2557 66 355 608'
+            required name="phone"
             className='outline-none border-none
             placeholder:text-olive-leaf px-2 py-1 '
             />
@@ -170,6 +172,13 @@ const Contacts = () => {
             placeholder:text-olive-leaf outline-none '
             />
             </div>
+            {/* error handling */}
+            {state.errors && (
+                    <div>
+                        <p>Something went wrong. Please try again.</p>
+                    </div>
+                )}
+
             {/* send button */}
             <button type="submit" disabled={state.submitting}
             className='mt-4 bg-white text-black px-2 py-1 mb-6
